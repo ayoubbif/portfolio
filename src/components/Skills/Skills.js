@@ -21,7 +21,7 @@ const Skills = () => {
       ];
       const optionsFrontend = [
         { value: 1, label: '⚛️ React.js' },
-        { value: 2, label: '🅰️ Angular.js' }
+        { value: 2, label: '⏭️ Next.js' }
       ];
       const optionsBackend = [
         { value: 1, label: '🌶️ Flask.py' },
@@ -64,30 +64,31 @@ const Skills = () => {
       const optionsVisualisation = [
         { value: 1, label: 'Autodesk VRED' }
       ];
-      //AI + Blockchain
-      const optionsAI = [
-        { value: 1, label: 'Tensorflow' },
-        { value: 2, label: 'OpenCV' },
-      ];
-      const optionsBlockchain = [
-        { value: 1, label: 'Solidity' },
-        { value: 2, label: 'truffle.js' },
-        { value: 3, label: 'web3.js' },
-      ];
       //PRODUCTION
       const optionsScripting = [
         { value: 1, label: 'Bash' },
-        { value: 2, label: 'Powershell' }
+        { value: 2, label: 'Powershell' },
+        { value: 2, label: 'Python' }
       ];
       const optionsGit = [
-        { value: 1, label: 'Git' }
+        { value: 1, label: 'Git' },
+        { value: 1, label: 'Plastic SCM' }
         
       ];
       const optionsDevOps = [
         { value: 1, label: 'Docker' },
         
       ];
-  
+      //SOUND DESIGN
+      const optionsDAW = [
+        { value: 1, label: 'FL Studio' },
+        { value: 1, label: 'Ableton' }
+        
+      ];
+      const optionsSoundEngine = [
+        { value: 1, label: 'FMOD' },
+        
+      ];
     const onChange = (evt, nextSelection) => console.log(evt, nextSelection);
     
     //STORE
@@ -104,7 +105,7 @@ const Skills = () => {
     return(
       <Draggable>
         <Window resizable style={{
-              width: "40%",
+              width: "50%",
               minWidth: "fit-content",
               height: "fit-content",
               position: "absolute",
@@ -124,12 +125,12 @@ const Skills = () => {
         </WindowHeader>
             <WindowContent>
             <Tabs value={activeTab} onChange={handleChange}>
-                <Tab value={0}>Web Dev</Tab>
-                <Tab value={1}>3D</Tab>
-                <Tab value={2}>AI + Blockchain</Tab>
-                <Tab value={3}>Production</Tab>
+                <Tab value={0}>Web Developement</Tab>
+                <Tab value={1}>3D & Game Dev</Tab>
+                <Tab value={2}>Production</Tab>
+                <Tab value={3}>Sound Design</Tab>
             </Tabs>
-                <TabBody style={{ height: 'fit-content', width: 'fit-content' }}>
+                <TabBody>
                     {activeTab === 0 && (
                     <div>
                         <Fieldset label='Languages'>
@@ -299,38 +300,8 @@ const Skills = () => {
                           />
                         </Fieldset>
                     </div>
-                    )}
+                    )}                 
                     {activeTab === 2 && (
-                    <div>
-                        <Fieldset label='Articifial Intelligence'>
-                            <Select 
-                            defaultValue={1}
-                            options={optionsAI}
-                            menuMaxHeight={160}
-                            width='100%'
-                            onChange={onChange}
-                            onOpen={e => console.log('open', e)}
-                            onClose={e => console.log('close', e)}
-                            onBlur={e => console.log('blur', e)}
-                            onFocus={e => console.log('focus', e)}
-                            />
-                        </Fieldset>
-                        <Fieldset label='Blockchain'>
-                            <Select 
-                            defaultValue={1}
-                            options={optionsBlockchain}
-                            menuMaxHeight={160}
-                            width='100%'
-                            onChange={onChange}
-                            onOpen={e => console.log('open', e)}
-                            onClose={e => console.log('close', e)}
-                            onBlur={e => console.log('blur', e)}
-                            onFocus={e => console.log('focus', e)}
-                            />
-                        </Fieldset>
-                    </div>
-                    )}
-                    {activeTab === 3 && (
                     <div>
                         <Fieldset label='Scripting'>
                           <Select 
@@ -362,6 +333,36 @@ const Skills = () => {
                           <Select 
                           defaultValue={1}
                           options={optionsDevOps}
+                          menuMaxHeight={160}
+                          width='100%'
+                          onChange={onChange}
+                          onOpen={e => console.log('open', e)}
+                          onClose={e => console.log('close', e)}
+                          onBlur={e => console.log('blur', e)}
+                          onFocus={e => console.log('focus', e)}
+                          />
+                        </Fieldset>
+                    </div>
+                    )}
+                    {activeTab === 3 && (
+                    <div>
+                        <Fieldset label='DAW'>
+                          <Select 
+                          defaultValue={1}
+                          options={optionsDAW}
+                          menuMaxHeight={160}
+                          width='100%'
+                          onChange={onChange}
+                          onOpen={e => console.log('open', e)}
+                          onClose={e => console.log('close', e)}
+                          onBlur={e => console.log('blur', e)}
+                          onFocus={e => console.log('focus', e)}
+                          />
+                        </Fieldset>
+                        <Fieldset label='Sound Engine'>
+                          <Select 
+                          defaultValue={1}
+                          options={optionsSoundEngine}
                           menuMaxHeight={160}
                           width='100%'
                           onChange={onChange}
