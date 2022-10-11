@@ -125,88 +125,13 @@ const Skills = () => {
         </WindowHeader>
             <WindowContent>
             <Tabs value={activeTab} onChange={handleChange}>
-                <Tab value={0}>Web Developement</Tab>
-                <Tab value={1}>3D & Game Dev</Tab>
+                <Tab value={0}>3D & Game Dev</Tab>
+                <Tab value={1}>Web Developement</Tab>
                 <Tab value={2}>Production</Tab>
                 <Tab value={3}>Sound Design</Tab>
             </Tabs>
                 <TabBody>
                     {activeTab === 0 && (
-                    <div>
-                        <Fieldset label='Languages'>
-                          <Select 
-                          defaultValue={1}
-                          options={optionsWebLanguages}
-                          menuMaxHeight={160}
-                          width='100%'
-                          onChange={onChange}
-                          onOpen={e => console.log('open', e)}
-                          onClose={e => console.log('close', e)}
-                          onBlur={e => console.log('blur', e)}
-                          onFocus={e => console.log('focus', e)}
-                          />
-                        </Fieldset>
-            
-                          <Fieldset label='Frameworks'>
-                          <Fieldset label='Front-End'>
-                            <Select 
-                            defaultValue={1}
-                            options={optionsFrontend}
-                            menuMaxHeight={160}
-                            width='100%'
-                            onChange={onChange}
-                            onOpen={e => console.log('open', e)}
-                            onClose={e => console.log('close', e)}
-                            onBlur={e => console.log('blur', e)}
-                            onFocus={e => console.log('focus', e)}
-                            />
-                          </Fieldset>
-                          <Fieldset label='Back-End'>
-                            <Select 
-                            defaultValue={1}
-                            options={optionsBackend}
-                            menuMaxHeight={160}
-                            width='100%'
-                            onChange={onChange}
-                            onOpen={e => console.log('open', e)}
-                            onClose={e => console.log('close', e)}
-                            onBlur={e => console.log('blur', e)}
-                            onFocus={e => console.log('focus', e)}
-                            />
-                          </Fieldset>
-                        </Fieldset>
-                        <Fieldset label='Data'>
-                          <Fieldset label='Databases'>
-                            <Select 
-                            defaultValue={1}
-                            options={optionsDB}
-                            menuMaxHeight={160}
-                            width='100%'
-                            onChange={onChange}
-                            onOpen={e => console.log('open', e)}
-                            onClose={e => console.log('close', e)}
-                            onBlur={e => console.log('blur', e)}
-                            onFocus={e => console.log('focus', e)}
-                            />
-                          </Fieldset>
-                          <Fieldset label='Data Science'>
-                            <Select 
-                            defaultValue={1}
-                            options={optionsDataScience}
-                            menuMaxHeight={160}
-                            width='100%'
-                            onChange={onChange}
-                            onOpen={e => console.log('open', e)}
-                            onClose={e => console.log('close', e)}
-                            onBlur={e => console.log('blur', e)}
-                            onFocus={e => console.log('focus', e)}
-                            />
-                          </Fieldset>
-                        </Fieldset>
-                    </div>
-
-                    )}
-                    {activeTab === 1 && (
                     <div>
                         <Fieldset label='Languages'>
                           <Select 
@@ -300,7 +225,82 @@ const Skills = () => {
                           />
                         </Fieldset>
                     </div>
-                    )}                 
+                    )}  
+                    {activeTab === 1 && (
+                    <div>
+                        <Fieldset label='Languages'>
+                          <Select 
+                          defaultValue={1}
+                          options={optionsWebLanguages}
+                          menuMaxHeight={160}
+                          width='100%'
+                          onChange={onChange}
+                          onOpen={e => console.log('open', e)}
+                          onClose={e => console.log('close', e)}
+                          onBlur={e => console.log('blur', e)}
+                          onFocus={e => console.log('focus', e)}
+                          />
+                        </Fieldset>
+            
+                          <Fieldset label='Frameworks'>
+                          <Fieldset label='Front-End'>
+                            <Select 
+                            defaultValue={1}
+                            options={optionsFrontend}
+                            menuMaxHeight={160}
+                            width='100%'
+                            onChange={onChange}
+                            onOpen={e => console.log('open', e)}
+                            onClose={e => console.log('close', e)}
+                            onBlur={e => console.log('blur', e)}
+                            onFocus={e => console.log('focus', e)}
+                            />
+                          </Fieldset>
+                          <Fieldset label='Back-End'>
+                            <Select 
+                            defaultValue={1}
+                            options={optionsBackend}
+                            menuMaxHeight={160}
+                            width='100%'
+                            onChange={onChange}
+                            onOpen={e => console.log('open', e)}
+                            onClose={e => console.log('close', e)}
+                            onBlur={e => console.log('blur', e)}
+                            onFocus={e => console.log('focus', e)}
+                            />
+                          </Fieldset>
+                        </Fieldset>
+                        <Fieldset label='Data'>
+                          <Fieldset label='Databases'>
+                            <Select 
+                            defaultValue={1}
+                            options={optionsDB}
+                            menuMaxHeight={160}
+                            width='100%'
+                            onChange={onChange}
+                            onOpen={e => console.log('open', e)}
+                            onClose={e => console.log('close', e)}
+                            onBlur={e => console.log('blur', e)}
+                            onFocus={e => console.log('focus', e)}
+                            />
+                          </Fieldset>
+                          <Fieldset label='Data Science'>
+                            <Select 
+                            defaultValue={1}
+                            options={optionsDataScience}
+                            menuMaxHeight={160}
+                            width='100%'
+                            onChange={onChange}
+                            onOpen={e => console.log('open', e)}
+                            onClose={e => console.log('close', e)}
+                            onBlur={e => console.log('blur', e)}
+                            onFocus={e => console.log('focus', e)}
+                            />
+                          </Fieldset>
+                        </Fieldset>
+                    </div>
+
+                    )}               
                     {activeTab === 2 && (
                     <div>
                         <Fieldset label='Scripting'>
