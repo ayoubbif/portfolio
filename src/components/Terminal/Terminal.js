@@ -143,7 +143,7 @@ const Terminal = () => {
     return(
         <Draggable>
             <Window style={{
-              width: "40%",
+              width: "fit-content",
               minWidth: "fit-content",
               height: "fit-content",
               position: "absolute",
@@ -164,7 +164,7 @@ const Terminal = () => {
                 </div>  
             </WindowHeader>
             <WindowContent>
-                <Cutout style={{width: 'fit-content', height: '400px', backgroundColor:'black'}}>
+                <Cutout style={{backgroundColor:'black', width: '700px', height: '500px'}}>
                 <div style={{ color: 'white', fontSize: '16px' }} className="input-prompt">
 								<div  style={{ paddingBottom: '20px' }}>
 									Retro Personal Website | [Beta Version]

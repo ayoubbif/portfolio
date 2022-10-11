@@ -34,7 +34,7 @@ const GlobalStyles = createGlobalStyle`
   @font-face {
     font-family: 'ms_sans_serif';
     src: url('${ms_sans_serif}') format('woff2');
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal
   }
   @font-face {
@@ -94,9 +94,9 @@ function App() {
             <nav>
             <AppBar style={{position: "fixed",
                         bottom: "0px",
-                        top: "93.5%",
+                        top: "95%",
                         margin: "0px",
-                        padding: "0px",
+                        padding: "1px",
                         minHeight:"60px"}}>
                     <Toolbar style={{justifyContent: 'space-between'}}>
                       <NavBar>

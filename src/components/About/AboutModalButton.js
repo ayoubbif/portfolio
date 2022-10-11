@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { Button } from 'react95';
+import './About.css';
 
 import { StoreContext } from '../../store';
 

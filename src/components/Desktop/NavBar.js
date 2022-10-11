@@ -97,7 +97,7 @@ const NavBar = () => {
 
         return (
             <Fragment>
-                        <div style={{position: 'relative', display: 'inline-block'}}>
+                        <div style={{position: 'relative', display: 'inline-block'}} className='textStyle'>
                            
                             <Button primary
                                     size='lg'
@@ -164,8 +164,8 @@ const NavBar = () => {
                             }
                 
                         </div>
-                        <Cutout style={{ width: '150px', height: '40px' }}>
-                            <Moment format="hh:mm:ss" style={{paddingLeft: '25px', display: 'inline-block'}}></Moment>
+                        <Cutout style={{ width: 'fit-content', height: 'fit-content', textAlign: 'center'}} className='textStyle'>
+                            <Moment format="hh:mm:ss" style={{display: 'inline-block', fontSize:'1.1em'}}></Moment>
                         </Cutout>
             </Fragment>
             

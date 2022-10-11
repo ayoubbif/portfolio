@@ -6,7 +6,7 @@ import contactIcon from '../../assets/icons/contact.png';
 import userIcon from '../../assets/icons/userIcon.png';
 import skillsIcon from '../../assets/icons/skills.png';
 import globeIcon from '../../assets/icons/globe.png'
-import { Button } from '@mui/material';
+import Button from '@mui/material/Button';
 
 import { StoreContext } from '../../store';
 

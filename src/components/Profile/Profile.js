@@ -28,12 +28,12 @@ export const Profile = () => {
     return (
       <Draggable>
         <Window resizable style={{
-              width: "40%",
+              width: "fit-content",
               minWidth: "fit-content",
               height: "fit-content",
               position: "absolute",
-              left: "25%",
-              top: "10%",
+              left: "79%",
+              top: "1%",
               overflowY: "auto",
               display: state.ProfileModal ? 'block' : 'none',
             }}
@@ -48,14 +48,17 @@ export const Profile = () => {
                 </Button>
           </div> 
         </WindowHeader>
-          <WindowContent>
+          <WindowContent style={{width: '400px', height: 'fit-content'}}>
           <div className="content">
             
-              <p id="name">Ayoub Biferdou</p>
-              <p>I am a young graduate in Software Engineering and Management of 3D Interactive Technologies</p>
-              <p>I am passionate about computers since I was very young, I am extremely motivated to improve my skills and make the most of any experience in the field of software development.</p>
-                    
-                <Panel className='panel' variant='outside'>
+              <p id="name">AYOUB BIFERDOU</p>
+                <br/>
+              <p>Skilled and detail-oriented Unity developer accustomed to working in fast-paced, deadline-driven environments.</p>
+                <br/> 
+              <p>Able to develop virtual experiences on a variety of platforms, keep up with technology advancements and conduct research.</p>
+                <br/> 
+
+                <Panel className='panel' variant='outside' style={{width: '400px'}}>
                     Education
                     <Fieldset className="scol1" label="2019-2020">
                     <p className="me_school">Institut Image - Arts et Métiers ParisTech</p>
@@ -66,7 +69,28 @@ export const Profile = () => {
                     <p className="me_diploma">Software Engineering</p>
                     </Fieldset>
                 </Panel>
-                    <Fieldset className="hobbiesFieldSet" label="Hobbies">
+
+                <br/><br/>
+
+                <Panel className='panel' variant='outside' style={{width: '400px'}}>
+                    Professional Experience
+                    <Fieldset className="scol1" label="Oct 2021 - Present">
+                    <p className="me_school">Allucyne/UTBM - Belfort</p>
+                    <p className="me_diploma">XR Research Engineer</p>
+                    </Fieldset>
+                    <Fieldset className="scol2" label="Mar 2020 - Aug 2020">
+                    <p className="me_school">Renault Group - Guyancourt</p>
+                    <p className="me_diploma">3D Interactive Media Developer</p>
+                    </Fieldset>
+                    <Fieldset className="scol2" label="Jul 2019 - Sep 2019">
+                    <p className="me_school">Ericsson - Rabat</p>
+                    <p className="me_diploma">Software Engineer</p>
+                    </Fieldset>
+                </Panel>
+
+                <br/><br/>
+
+                <Fieldset className="hobbiesFieldSet" label="Hobbies">
                       <div className="hobbies">
                       <Tooltip className="hobby_disc" text='Music Production' enterDelay={100} leaveDelay={100}>  
                         <Cutout className="hobby"> 

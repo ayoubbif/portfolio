@@ -22,6 +22,10 @@ content {
 
 #name{
     font-weight: bolder;
+    font-size: 1.1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .me_pos{
@@ -72,11 +76,11 @@ content {
 }
 
 .hobby {
-    margin-right: 0.5%;
+    margin-right: 0.4%;
 }
 
 .hobby_disc{
- color: red;
+ color: rgb(37, 85, 92);
 }
 .hobbiesFieldSet{
     margin-top: 15px !important;

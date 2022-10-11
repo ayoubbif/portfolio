@@ -21,7 +21,7 @@ const Globe = () => {
     return(
         <Draggable>
             <Window style={{
-              width: "50%",
+              width: "fit-content",
               minWidth: "fit-content",
               height: "fit-content",
               position: "absolute",
@@ -31,7 +31,7 @@ const Globe = () => {
               display: state.GlobeModal ? 'block' : 'none',
             }}
             onClick={_handleClick}>
-       
+
           
             <WindowHeader className='window-header'>
                 <span>globe.exe</span>
@@ -41,11 +41,13 @@ const Globe = () => {
                     </Button>
                 </div>  
             </WindowHeader>
+
             <WindowContent>
-                <Cutout style={{width: 'fit-content', height: '420px'}}>
+                <Cutout style={{width: '420px', height: '420px'}}>
                     <World/>
                 </Cutout>
             </WindowContent>
+            
             </Window>
         </Draggable>
 
