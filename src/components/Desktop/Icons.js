@@ -5,8 +5,8 @@ const Icons = ({ icon, text, textColor }) => {
   return (
     <Fragment>
       <span className="desktop-icons">
-        <img src={icon} alt="" height="40px" width="40px" />
-        <p style={{color:`${textColor}`, fontFamily:'ms_sans_serif'}}>{text}</p>
+        <img src={icon} alt="" height="30px" width="30px" />
+        <p style={{color:`${textColor}`, fontFamily:'ms_sans_serif', fontSize: '1em'}}>{text}</p>
       </span>
     </Fragment>
   );
