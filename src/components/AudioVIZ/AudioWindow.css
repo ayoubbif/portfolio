@@ -18,4 +18,13 @@
     justify-content: space-around;
     align-items: center;
     color: #606060;
+}
+
+.btn {
+    cursor: pointer;
+    background-repeat: no-repeat;
+    opacity: 0.85;
+    width: 25px;
+    height: 25px;
+    
   }

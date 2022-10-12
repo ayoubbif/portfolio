@@ -1,28 +1,30 @@
 import React, { useContext, useState } from 'react';
 import { WindowContent, Window, WindowHeader, Cutout, Button } from 'react95';
-import {BiPlayCircle} from 'react-icons/bi';
 
 import Draggable from 'react-draggable';
 import './AudioWindow.css';
+import {FaPlay} from 'react-icons/fa';
+import {CgGames} from 'react-icons/cg';
 
 import { StoreContext } from '../../store';
 import AudioViz from './AudioViz';
 
+
 function Overlay() {
     const [ready, set] = useState(false);
+
 
     return (
       <>
         {ready && <AudioViz/>}
           <div className="stack">
             <Button onClick={() => set(prev => !prev)}>
-                <BiPlayCircle></BiPlayCircle>
+              <FaPlay/>
             </Button>
           </div>
       </>
     )
   }
-
 
 const AudioWindow = () => {
     const [state, dispatch] = useContext(StoreContext);
@@ -49,14 +51,14 @@ const AudioWindow = () => {
             }}
             onClick={_handleClick}>
 
-          
+
             <WindowHeader className='window-header'>
                 <span>audioViz.exe</span>
                 <div className='window-state'>
                     <Button onClick={_handleClose}>
                         X
                     </Button>
-                </div>  
+                </div>
             </WindowHeader>
 
             <WindowContent>
@@ -64,7 +66,7 @@ const AudioWindow = () => {
                     <Overlay/>
                 </Cutout>
             </WindowContent>
-            
+
             </Window>
         </Draggable>
 
