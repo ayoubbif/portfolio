@@ -5,7 +5,9 @@ import Icons from './Icons';
 import contactIcon from '../../assets/icons/contact.png';
 import userIcon from '../../assets/icons/userIcon.png';
 import skillsIcon from '../../assets/icons/skills.png';
-import globeIcon from '../../assets/icons/globe.png'
+import globeIcon from '../../assets/icons/globe.png';
+import audioIcon from '../../assets/icons/sound.png';
+
 import Button from '@mui/material/Button';
 
 import { StoreContext } from '../../store';
@@ -34,6 +36,11 @@ const Desktop = () => {
                 dispatch ({ type: 'SET_GLOBE_MODAL', payload: true });
                 dispatch ({ type: 'SET_HIDE_GLOBE_MODAL', payload: false });
                 break;
+            case 'audio':
+                dispatch ({ type: 'SET_ACTIVE_MODAL', payload: 'audio' });
+                dispatch ({ type: 'SET_AUDIO_WINDOW_MODAL', payload: true });
+                dispatch ({ type: 'SET_HIDE_AUDIO_WINDOW_MODAL_BUTTON', payload: false });
+                break;    
             default:
                 return null;
         }
@@ -57,6 +64,9 @@ const Desktop = () => {
 				<br />
 				<Button onClick={() => _handleIconClick('globe')}>
 					<Icons icon={globeIcon} text="Globe"></Icons>
+				</Button>
+                <Button onClick={() => _handleIconClick('audio')}>
+					<Icons icon={audioIcon} text="AudioVIZ"></Icons>
 				</Button>
 			</div>
         </Fragment>

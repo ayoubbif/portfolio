@@ -10,7 +10,7 @@ const initialState = {
     hideGlobeModalButton: true,
     hideCryptoModalButton: true,
     hideTerminalModalButton: true,
-    hideJennyModalButton: true,
+    hideAudioWindowModalButton: true,
     hideContactModalButton: true,
 };
 
@@ -84,17 +84,17 @@ function reducer(state, action) {
                 ...state,
                 hideCryptoModalButton: action.payload,
             };
-        case 'SET_JENNY_MODAL':
+        case 'SET_AUDIO_WINDOW_MODAL':
             action.payload && setBodyOverflow('hidden');
             return{
                 ...state,
-                JennyModal: action.payload,
+                AudioWindowModal: action.payload,
             };
-        case 'SET_HIDE_JENNY_MODAL_BUTTON':
+        case 'SET_HIDE_AUDIO_WINDOW_MODAL_BUTTON':
             action.payload && setBodyOverflow('hidden');
             return{
                 ...state,
-                hideJennyModalButton: action.payload,
+                hideAudioWindowModalButton: action.payload,
             };
         case 'SET_CONTACT_MODAL':
             action.payload && setBodyOverflow('hidden');

@@ -15,6 +15,7 @@ import Globe from './components/3D/Globe/Globe';
 import Terminal from './components/Terminal/Terminal';
 import Crypto from './components/Crypto/Crypto';
 import Contact from './components/Contact/Contact';
+import AudioWindow from './components/AudioVIZ/AudioWindow';
 
 import AboutModalButton from './components/About/AboutModalButton';
 import SkillsModalButton from './components/Skills/SkillsModalButton';
@@ -68,15 +69,10 @@ function App() {
               position: "absolute"}} >
           <WindowHeader active={false} className='window-header'>
             <span>not-active.exe</span>
-            <div className='window-state' >
-                <Button>
-                 X
-                </Button>
-            </div> 
           </WindowHeader>
           <WindowContent>
-            <p>Hello there stranger, unfortunately my website is designed only for desktop browsers!</p>    
-            <strong>
+            <p style={{fontSize: '1.8em'}}>Hello there stranger, unfortunately my website is designed only for desktop browsers!</p>    
+            <strong style={{fontSize: '1.6em'}}>
               But I promise that the mobile version will be available soon! Thank you for passing by!
             </strong>
           </WindowContent>
@@ -92,11 +88,13 @@ function App() {
       <ThemeProvider theme={original}>
         <Store>
             <nav>
-            <AppBar style={{position: "fixed",
-                        bottom: "0px",
-                        top: "95%",
-                        margin: "0px",
-                        padding: "1px",
+              <div>
+
+              </div>
+              <AppBar style={{position: "fixed",
+                        height: "fit-content",
+                        bottom: "0%",
+                        top: "92.5%",
                         minHeight:"60px"}}>
                     <Toolbar style={{justifyContent: 'space-between'}}>
                       <NavBar>
@@ -105,15 +103,16 @@ function App() {
                         <SkillsModalButton/>
                       </NavBar>
                     </Toolbar>
-            </AppBar>
-
+              </AppBar>
             </nav>
+
             <main>
               <Desktop></Desktop>
               <About></About>
               <Skills></Skills>
               <Profile></Profile>
               <Globe></Globe>
+              <AudioWindow></AudioWindow>
               <Crypto></Crypto>
               <Contact></Contact>
               <Terminal></Terminal>

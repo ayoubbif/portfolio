@@ -22,17 +22,6 @@ import { StoreContext } from '../../store';
 
 const NavBar = () => {
     const [state, dispatch] = useContext(StoreContext);
-    const [startupSound, setStartupSound] = useState(null);
-
-    useEffect(() => {
-        const ss = localStorage.getItem('startup_sound');
-        if (ss === null) {
-          localStorage.setItem('startup_sound', true);
-          setStartupSound(true);
-        } else {
-          setStartupSound(ss === 'true');
-        }
-      }, []);
     
     const _handleClick = () => {
         dispatch({ type: 'SET_MENU', payload: !state.menu });
@@ -41,16 +30,6 @@ const NavBar = () => {
     const _handleClose = () => {
         dispatch({ type: 'SET_MENU', payload: false });
     };
-    const _handleStartupSound = () => {
-        const ss = localStorage.getItem('startup_sound');
-        if (ss === 'true') {
-          localStorage.setItem('startup_sound', false);
-          setStartupSound(false);
-        } else {
-          localStorage.setItem('startup_sound', true);
-          setStartupSound(true);
-        }
-      };
 
     const _handleListItemClick = name => {
         switch (name) {
@@ -93,8 +72,7 @@ const NavBar = () => {
                 return null;
         }
     };
-
-
+    
         return (
             <Fragment>
                         <div style={{position: 'relative', display: 'inline-block'}} className='textStyle'>
@@ -104,7 +82,7 @@ const NavBar = () => {
                                     onClick={_handleClick}
                                     active={state.menu} 
                                     style={{ fontWeight: 'bold' }}>
-                                <img src={windowsIcon} alt='windows' style={{ height: '20px', marginRight: 4 }}/>
+                                <img src={windowsIcon} alt='windows' style={{ height: '30px', marginRight: 4 }}/>
                                 <span>Start</span>
                             </Button>
                             {state.menu && (
