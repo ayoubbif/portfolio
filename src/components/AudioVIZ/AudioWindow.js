@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { WindowContent, Window, WindowHeader, Cutout, Button } from 'react95';
 import {BiPlayCircle} from 'react-icons/bi';
- 
+
 import Draggable from 'react-draggable';
 import './AudioWindow.css';
 

@@ -1,16 +1,17 @@
 import * as THREE from 'three'
 import { Suspense, useEffect, useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
+import { OrbitControls, Stars } from '@react-three/drei';
 import { suspend } from 'suspend-react'
 
 export default function AudioViz(props) {
   return (
-    <Canvas shadows dpr={[2, 2]} camera={{ position: [-1, 1.2, 2], fov: 20 }} >
-      <spotLight position={[-4, 4, -4]} angle={0.06} penumbra={1} castShadow shadow-mapSize={[2048, 2048]} />
+    <Canvas shadows dpr={[2, 2]} camera={{ position: [-1.0, 1.0, 1.5], fov: 15 }} >
+      <spotLight position={[-4, 4, -4]} angle={0.2} penumbra={1} castShadow shadow-mapSize={[2048, 2048]} />
       <Suspense fallback={null}>
         <Track position-z={-0.25} url="/beat.mp3" />
       </Suspense>
-      <mesh receiveShadow rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.025, 0]}>
+      <mesh receiveShadow rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.1, 0]}>
         <planeGeometry />
         <shadowMaterial transparent opacity={0.15} />
       </mesh>
