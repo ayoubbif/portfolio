@@ -44,8 +44,8 @@ const _handleClick = () => {
   return (
     <Draggable>
         <Window style={{
-              width: "900px",
-              height: "740px",
+              width: "fit-content",
+              height: "fit-content",
               position: "absolute",
               left: "25%",
               top: "10%",
@@ -63,7 +63,7 @@ const _handleClick = () => {
     
             <TextField onChange={handleChange} placeholder='Search'/>
               
-            <Cutout style={{ width: '885px', height: '650px' }}>
+            <Cutout style={{ width: '850px', height: '400px' }}>
                 {filteredCoins.map(coin => {
                     return (
                         <Coin
