@@ -88,9 +88,7 @@ function App() {
       <ThemeProvider theme={original}>
         <Store>
             <nav>
-              <div>
-
-              </div>
+              <footer>
               <AppBar style={{ top: '95vh', bottom: '0vh', zIndex:1 }}>
                     <Toolbar style={{justifyContent: 'space-between'}}>
                       <NavBar>
@@ -100,6 +98,8 @@ function App() {
                       </NavBar>
                     </Toolbar>
               </AppBar>
+              </footer>
+
             </nav>
 
             <main>

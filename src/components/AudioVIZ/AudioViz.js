@@ -6,12 +6,12 @@ import { suspend } from 'suspend-react'
 
 export default function AudioViz(props) {
   return (
-    <Canvas shadows dpr={[2, 2]} camera={{ position: [-1.0, 1.0, 1.5], fov: 15 }} >
-      <spotLight position={[-4, 4, -4]} angle={0.2} penumbra={1} castShadow shadow-mapSize={[2048, 2048]} />
+    <Canvas shadows dpr={[2, 2]} camera={{ position: [-0.5, 0.6, 2], fov: 10 }} >
+      <spotLight position={[-3, 3, -3]} angle={0.2} penumbra={1} castShadow shadow-mapSize={[2048, 2048]} />
       <Suspense fallback={null}>
         <Track position-z={-0.25} url="/beat.mp3" />
       </Suspense>
-      <mesh receiveShadow rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.1, 0]}>
+      <mesh receiveShadow rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.07, 0]}>
         <planeGeometry />
         <shadowMaterial transparent opacity={0.15} />
       </mesh>
@@ -40,7 +40,7 @@ function Track({ url, y = 2500, space = 1.8, width = 0.01, height = 0.05, obj = 
       ref.current.setMatrixAt(i, obj.matrix)
     }
     // Set the hue according to the frequency average
-    ref.current.material.color.setHSL(avg / 500, 0.75, 0.75)
+    ref.current.material.color.setHSL(avg / 100, 0.75, 0.75)
     ref.current.instanceMatrix.needsUpdate = true
   })
   return (
