@@ -91,11 +91,7 @@ function App() {
               <div>
 
               </div>
-              <AppBar style={{position: "fixed",
-                        height: "fit-content",
-                        bottom: "0%",
-                        top: "93%",
-                        minHeight:"60px"}}>
+              <AppBar style={{ top: '95vh', bottom: '0vh', zIndex:1 }}>
                     <Toolbar style={{justifyContent: 'space-between'}}>
                       <NavBar>
                         <AboutModalButton/>
