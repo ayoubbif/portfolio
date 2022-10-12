@@ -3,7 +3,7 @@ import { useState } from 'react';
 const commands = {
     help: 'quit: exit the terminal, clear: clean up the terminal, open: open the directory, close: close the directory, hire: gives you detailed coordinates to contact me',
     quit: 'Quitting the terminal ... Adios!',
-    ls: 'About  Profile  Skills  Crypto  Globe',
+    ls: 'About  Profile  Skills  Crypto  Globe AudioViz',
     'open about': 'About is now open',
     'close about': 'About is now closed',
     'open profile': 'Profile is now open',
@@ -16,6 +16,8 @@ const commands = {
     'close jenny': 'Jenny is now closed',
     'open globe': 'Globe is now open',
     'close globe': 'Globe is now closed',
+    'open audio': 'audioViz is now open',
+    'close audio': 'audioViz is now closed',
     hire: 'Please contact me at "ayoub.biferdou@gmail.com"',
     clear: 'clear',
 }

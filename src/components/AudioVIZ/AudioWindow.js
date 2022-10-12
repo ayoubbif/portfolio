@@ -1,11 +1,28 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { WindowContent, Window, WindowHeader, Cutout, Button } from 'react95';
-
+import {BiPlayCircle} from 'react-icons/bi';
+ 
 import Draggable from 'react-draggable';
 import './AudioWindow.css';
 
 import { StoreContext } from '../../store';
 import AudioViz from './AudioViz';
+
+function Overlay() {
+    const [ready, set] = useState(false);
+    // const [show, setShow] = useState(false);
+
+    return (
+      <>
+        {ready && <AudioViz/>}
+          <div className="stack">
+            <Button onClick={() => set(prev => !prev)}>
+                <BiPlayCircle></BiPlayCircle>
+            </Button>
+          </div>
+      </>
+    )
+  }
 
 const AudioWindow = () => {
     const [state, dispatch] = useContext(StoreContext);
@@ -43,8 +60,8 @@ const AudioWindow = () => {
             </WindowHeader>
 
             <WindowContent>
-                <Cutout style={{width: '420px', height: '420px'}}>
-                    <AudioViz/>
+                <Cutout style={{width: '450px', height: 'fit-content'}}>
+                    <Overlay/>
                 </Cutout>
             </WindowContent>
             

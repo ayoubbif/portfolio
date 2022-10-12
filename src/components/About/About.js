@@ -28,7 +28,7 @@ const About = () => {
     return(
         <Draggable>
             <Window resizable style={{
-              width: "35%",
+              width: "20%",
               minWidth: "fit-content",
               height: "fit-content",
               position: "absolute",
@@ -53,7 +53,7 @@ const About = () => {
                     <Tab value={0}>Why?</Tab>
                     <Tab value={1}>How?</Tab>
                 </Tabs>
-                    <TabBody style={{ height: 'fit-content', width: 'fit-content' }}>
+                    <TabBody style={{ height: 'fit-content', width: '500px' }}>
                     {activeTab === 0 && (
                     <div>
                         <p style={{fontSize: '1.5rem'}}>

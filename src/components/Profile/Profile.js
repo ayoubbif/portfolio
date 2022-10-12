@@ -28,12 +28,12 @@ export const Profile = () => {
     return (
       <Draggable>
         <Window resizable style={{
-              width: "fit-content",
+              width: "600px",
               minWidth: "fit-content",
               height: "fit-content",
               position: "absolute",
-              left: "79%",
-              top: "1%",
+              left: "59%",
+              top: "0%",
               overflowY: "auto",
               display: state.ProfileModal ? 'block' : 'none',
             }}
@@ -48,7 +48,7 @@ export const Profile = () => {
                 </Button>
           </div> 
         </WindowHeader>
-          <WindowContent style={{width: '400px', height: 'fit-content'}}>
+          <WindowContent style={{width: '600px', height: '800px'}}>
           <div className="content">
             
               <p id="name">AYOUB BIFERDOU</p>
@@ -56,9 +56,8 @@ export const Profile = () => {
               <p>Skilled and detail-oriented Unity developer accustomed to working in fast-paced, deadline-driven environments.</p>
                 <br/> 
               <p>Able to develop virtual experiences on a variety of platforms, keep up with technology advancements and conduct research.</p>
-                <br/> 
-
-                <Panel className='panel' variant='outside' style={{width: '400px'}}>
+                <br/>
+                <Panel className='panel' variant='outside' style={{width: '600px'}}>
                     Education
                     <Fieldset className="scol1" label="2019-2020">
                     <p className="me_school">Institut Image - Arts et Métiers ParisTech</p>
@@ -70,9 +69,7 @@ export const Profile = () => {
                     </Fieldset>
                 </Panel>
 
-                <br/><br/>
-
-                <Panel className='panel' variant='outside' style={{width: '400px'}}>
+                <Panel className='panel' variant='outside' style={{width: '600px'}}>
                     Professional Experience
                     <Fieldset className="scol1" label="Oct 2021 - Present">
                     <p className="me_school">Allucyne/UTBM - Belfort</p>
@@ -87,8 +84,6 @@ export const Profile = () => {
                     <p className="me_diploma">Software Engineer</p>
                     </Fieldset>
                 </Panel>
-
-                <br/><br/>
 
                 <Fieldset className="hobbiesFieldSet" label="Hobbies">
                       <div className="hobbies">

@@ -109,8 +109,8 @@ const Skills = () => {
               minWidth: "fit-content",
               height: "fit-content",
               position: "absolute",
-              left: "33%",
-              top: "15%",
+              left: "7%",
+              top: "10%",
               overflowY: "auto",
               display: state.SkillsModal ? 'block' : 'none',
             }}

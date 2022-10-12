@@ -46,6 +46,11 @@ const Terminal = () => {
                 dispatch ({ type: 'SET_ACTIVE_MODAL', payload: 'terminal' });
                 dispatch ({ type: 'SET_TERMINAL_MODAL', payload: true });
                 dispatch ({ type: 'SET_HIDE_TERMINAL_MODAL', payload: false });
+                break;
+            case 'audio':
+                dispatch ({ type: 'SET_ACTIVE_MODAL', payload: 'audio' });
+                dispatch ({ type: 'SET_AUDIO_WINDOW_MODAL', payload: true });
+                dispatch ({ type: 'SET_HIDE_AUDIO_WINDOW_MODAL_BUTTON', payload: false });
                 break;    
             default:
                 return null;
@@ -83,6 +88,10 @@ const Terminal = () => {
     const _closeGlobe = () => {
         dispatch({type: 'SET_GLOBE_MODAL', payload: false});
         dispatch({type: 'SET_HIDE_GLOBE_MODAL_BUTTON', payload: true});
+    };
+    const _closeAudio = () => {
+        dispatch({type: 'SET_AUDIO_WINDOW_MODAL', payload: false});
+        dispatch({type: 'SET_HIDE_AUDIO_WINDOW_MODAL_BUTTON', payload: true});
     };
 
     const inputText = useRef();
@@ -133,6 +142,12 @@ const Terminal = () => {
         if(commandValues === 'close globe') {
             _closeGlobe();
         }
+        if(commandValues === 'open audio') {
+            _handleApp('audio');
+        }
+        if(commandValues === 'close audio') {
+            _closeAudio();
+        }
         if(commandValues === 'quit') {
             _handleClose();
         }
@@ -147,8 +162,8 @@ const Terminal = () => {
               minWidth: "fit-content",
               height: "fit-content",
               position: "absolute",
-              left: "55%",
-              top: "10%",
+              left: "50%",
+              top: "25%",
               overflowY: "auto",
               display: state.TerminalModal ? 'block' : 'none',
             }}
@@ -164,12 +179,12 @@ const Terminal = () => {
                 </div>  
             </WindowHeader>
             <WindowContent>
-                <Cutout style={{backgroundColor:'black', width: '700px', height: '500px'}}>
-                <div style={{ color: 'white', fontSize: '16px' }} className="input-prompt">
-								<div  style={{ paddingBottom: '20px' }}>
+                <Cutout style={{backgroundColor:'black', width: '600px', height: '350px'}}>
+                <div style={{ color: 'white', fontSize: '15px' }} className="input-prompt">
+								<div  style={{ paddingBottom: '17px' }}>
 									Retro Personal Website | [Beta Version]
                                     <br/>
-                                    (C) Copyright 2021
+                                    (C) Copyright 2022
 								</div>
 								<MapConsoleOutput consoleOutput={consoleOutput} />
 								<span>Retro Personal Website:\{' >'} </span>
