@@ -75,7 +75,7 @@ const NavBar = () => {
                                     size='lg'
                                     onClick={_handleClick}
                                     active={state.menu} 
-                                    style={{ fontWeight: 'bold' }}>
+                                    style={{ fontWeight: 'bold', marginTop: 3  }}>
                                 <img src={windowsIcon} alt='windows' style={{ height: '30px', marginRight: 4 }}/>
                                 <span>Start</span>
                             </Button>

@@ -88,8 +88,9 @@ function App() {
       <ThemeProvider theme={original}>
         <Store>
             <nav>
+              
               <footer>
-              <AppBar style={{ top: '95vh', bottom: '0vh', zIndex:1 }}>
+              <AppBar style={{ top: '93vh', bottom: '0vh', zIndex:1 }}>
                     <Toolbar style={{justifyContent: 'space-between'}}>
                       <NavBar>
                         <AboutModalButton/>
