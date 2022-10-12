@@ -16,7 +16,6 @@ import skillsIcon from '../../assets/icons/skills.png';
 import globeIcon from '../../assets/icons/globe.png';
 import cryptoIcon from '../../assets/icons/crip.png';
 import terminalIcon from '../../assets/icons/terminal.png';
-import jennyIcon from '../../assets/icons/trash.png';
 
 import { StoreContext } from '../../store';
 
@@ -57,11 +56,6 @@ const NavBar = () => {
                 dispatch ({ type: 'SET_ACTIVE_MODAL', payload: 'crypto' });
                 dispatch ({ type: 'SET_CRYPTO_MODAL', payload: true });
                 dispatch ({ type: 'SET_HIDE_CRYPTO_MODAL', payload: false });
-                break;
-            case 'jenny':
-                dispatch ({ type: 'SET_ACTIVE_MODAL', payload: 'jenny' });
-                dispatch ({ type: 'SET_JENNY_MODAL', payload: true });
-                dispatch ({ type: 'SET_HIDE_JENNY_MODAL', payload: false });
                 break;
             case 'terminal':
                 dispatch ({ type: 'SET_ACTIVE_MODAL', payload: 'terminal' });
@@ -122,12 +116,6 @@ const NavBar = () => {
                                         <img src={cryptoIcon} alt='crypto' style={{ height: "24px", width: "24px" }} />
                                         <span style={{ paddingLeft: "5px" }}>
                                             Crypto
-                                        </span> 
-                                    </ListItem>
-                                    <ListItem onClick={() => _handleListItemClick('jenny')}>
-                                        <img src={jennyIcon} alt='jenny' style={{ height: "24px", width: "24px" }} />
-                                        <span style={{ paddingLeft: "5px" }}>
-                                            Jenny
                                         </span> 
                                     </ListItem>
                                     <ListItem onClick={() => _handleListItemClick('terminal')}>

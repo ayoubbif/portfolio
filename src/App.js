@@ -94,7 +94,7 @@ function App() {
               <AppBar style={{position: "fixed",
                         height: "fit-content",
                         bottom: "0%",
-                        top: "92.5%",
+                        top: "93%",
                         minHeight:"60px"}}>
                     <Toolbar style={{justifyContent: 'space-between'}}>
                       <NavBar>

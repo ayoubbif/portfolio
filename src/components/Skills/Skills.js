@@ -56,7 +56,8 @@ const Skills = () => {
         { value: 3, label: 'MRTK' }, 
       ];
       const optionsVR = [
-        { value: 1, label: 'HTC Vive' }
+        { value: 1, label: 'HTC Vive' },
+        { value: 1, label: 'Oculus Quest' }
       ];
       const optionsModeling = [
         { value: 1, label: 'Autodesk 3ds Max' }

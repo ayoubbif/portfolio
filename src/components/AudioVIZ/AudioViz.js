@@ -32,7 +32,7 @@ function Track({ url, y = 2500, space = 1.8, width = 0.01, height = 0.05, obj = 
 
   useFrame((state) => {
     let avg = update()
-    // Distribute the instanced planes according to the frequency daza
+    // Distribute the instanced planes according to the frequency data
     for (let i = 0; i < data.length; i++) {
       obj.position.set(i * width * space - (data.length * width * space) / 2, data[i] / y, 0)
       obj.updateMatrix()

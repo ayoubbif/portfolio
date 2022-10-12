@@ -1,5 +1,6 @@
 import React ,{useRef,useEffect}from "react";
 import Prompt from "./Prompt";
+import './Terminal.css';
 
 const MapConsoleOutput = ({consoleOutput})=>{
     const scrollRef = useRef()

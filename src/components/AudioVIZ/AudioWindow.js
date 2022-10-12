@@ -10,7 +10,6 @@ import AudioViz from './AudioViz';
 
 function Overlay() {
     const [ready, set] = useState(false);
-    // const [show, setShow] = useState(false);
 
     return (
       <>
@@ -23,6 +22,7 @@ function Overlay() {
       </>
     )
   }
+
 
 const AudioWindow = () => {
     const [state, dispatch] = useContext(StoreContext);

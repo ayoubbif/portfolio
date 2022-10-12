@@ -11,3 +11,11 @@
     align-items: center;
     justify-content: space-between;   
 }
+
+.terminalText {
+    font-size: 1em;
+}
+
+.console-output{
+    line-break: loose;
+}

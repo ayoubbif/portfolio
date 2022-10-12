@@ -12,8 +12,6 @@ const commands = {
     'close skills': 'Skills is now closed',
     'open crypto': 'Crypto is now open',
     'close crypto': 'Crypto is now closed',
-    'open jenny': 'Jenny is now open',
-    'close jenny': 'Jenny is now closed',
     'open globe': 'Globe is now open',
     'close globe': 'Globe is now closed',
     'open audio': 'audioViz is now open',
