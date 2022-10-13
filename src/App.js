@@ -16,6 +16,7 @@ import Terminal from './components/Terminal/Terminal';
 import Crypto from './components/Crypto/Crypto';
 import Contact from './components/Contact/Contact';
 import AudioWindow from './components/AudioVIZ/AudioWindow';
+import Projects from './components/Projects/Projects';
 
 import AboutModalButton from './components/About/AboutModalButton';
 import SkillsModalButton from './components/Skills/SkillsModalButton';
@@ -29,6 +30,7 @@ import {
   MobileView,
   isMobile,
 } from "react-device-detect";
+
 
 
 const GlobalStyles = createGlobalStyle`
@@ -110,6 +112,7 @@ function App() {
                 <Crypto></Crypto>
                 <Contact></Contact>
                 <Terminal></Terminal>
+                <Projects></Projects>
               </div>
             </main>
           </ThemeProvider>

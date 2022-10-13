@@ -104,7 +104,7 @@ export const Profile = () => {
                         </Cutout>
                       </Tooltip>
                       </div>
-                    </Fieldset>
+                </Fieldset>
           </div>      
           </WindowContent>
         </Window>

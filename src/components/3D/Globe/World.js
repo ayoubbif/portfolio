@@ -23,9 +23,8 @@ const Earth = () => {
 export default function World() {
 
     return(
-        <Canvas style={{ background: '#071722' }}>
-            <OrbitControls/>
-            <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade/>
+        <Canvas style={{ background: '#063334' }}>
+            <Stars radius={50} depth={50} count={5000} factor={4} saturation={0} fade/>
             <ambientLight intensity={0.8} />
             <spotLight intensity={0.8} position={[10, 10, 10]} />
             <Suspense fallback={null}>

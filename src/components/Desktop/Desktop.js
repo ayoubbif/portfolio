@@ -7,6 +7,7 @@ import userIcon from '../../assets/icons/userIcon.png';
 import skillsIcon from '../../assets/icons/skills.png';
 import globeIcon from '../../assets/icons/globe.png';
 import audioIcon from '../../assets/icons/sound.png';
+import pcIcon from '../../assets/icons/pc.png';
 
 import Button from '@mui/material/Button';
 
@@ -40,7 +41,12 @@ const Desktop = () => {
                 dispatch ({ type: 'SET_ACTIVE_MODAL', payload: 'audio' });
                 dispatch ({ type: 'SET_AUDIO_WINDOW_MODAL', payload: true });
                 dispatch ({ type: 'SET_HIDE_AUDIO_WINDOW_MODAL_BUTTON', payload: false });
-                break;    
+                break;  
+            case 'projects':
+                dispatch ({ type: 'SET_ACTIVE_MODAL', payload: 'projects' });
+                dispatch ({ type: 'SET_PROJECTS_MODAL', payload: true });
+                dispatch ({ type: 'SET_HIDE_PROJECTS_MODAL_BUTTON', payload: false });
+                break;  
             default:
                 return null;
         }
@@ -53,18 +59,22 @@ const Desktop = () => {
 					<Icons icon={contactIcon} text="Contact"></Icons>
 				</Button>
 					
-				<br />
 				<Button onClick={() => _handleIconClick('profile')}>
 					<Icons icon={userIcon} text="Profile"></Icons>
 				</Button>
-				<br />
+
 				<Button onClick={() => _handleIconClick('skills')}>
 					<Icons icon={skillsIcon} text="Skills"></Icons>
 				</Button>
-				<br />
+
+                <Button onClick={() => _handleIconClick('projects')}>
+					<Icons icon={pcIcon} text="Projects"></Icons>
+				</Button>
+
 				<Button onClick={() => _handleIconClick('globe')}>
 					<Icons icon={globeIcon} text="Globe"></Icons>
 				</Button>
+
                 <Button onClick={() => _handleIconClick('audio')}>
 					<Icons icon={audioIcon} text="AudioVIZ"></Icons>
 				</Button>

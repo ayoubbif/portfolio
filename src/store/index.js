@@ -12,6 +12,7 @@ const initialState = {
     hideTerminalModalButton: true,
     hideAudioWindowModalButton: true,
     hideContactModalButton: true,
+    hideProjectsModalButton: true,
 };
 
 function reducer(state, action) {
@@ -33,6 +34,19 @@ function reducer(state, action) {
             return{
                 ...state,
                 hideAboutModalButton: action.payload,
+            };
+
+        case 'SET_PROJECTS_MODAL':
+            action.payload && setBodyOverflow('hidden');
+            return{
+                ...state,
+                ProjectsModal: action.payload,
+            };
+        case 'SET_HIDE_PROJECTS_MODAL_BUTTON':
+            action.payload && setBodyOverflow('hidden');
+            return{
+                ...state,
+                hideProjectsModalButton: action.payload,
             };
         
         case 'SET_SKILLS_MODAL':
