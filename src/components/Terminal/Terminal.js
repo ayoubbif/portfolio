@@ -161,7 +161,7 @@ const Terminal = () => {
               width: "fit-content",
               minWidth: "fit-content",
               height: "fit-content",
-              position: "absolute",
+              position: "fixed",
               left: "50%",
               top: "25%",
               overflowY: "auto",

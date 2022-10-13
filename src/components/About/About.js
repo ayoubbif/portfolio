@@ -31,7 +31,7 @@ const About = () => {
               width: "20%",
               minWidth: "fit-content",
               height: "fit-content",
-              position: "absolute",
+              position: "fixed",
               left: "60%",
               top: "10%",
               overflowY: "auto",

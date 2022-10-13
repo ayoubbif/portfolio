@@ -28,10 +28,11 @@ export const Profile = () => {
     return (
       <Draggable>
         <Window resizable style={{
-              width: "600px",
+              width: "400px",
               minWidth: "fit-content",
+              minHeight: "fit-content",
               height: "fit-content",
-              position: "absolute",
+              position: "fixed",
               bottom: '60px',
               right: '0px',
               zIndex: 1,

@@ -46,7 +46,7 @@ const _handleClick = () => {
         <Window style={{
               width: "fit-content",
               height: "fit-content",
-              position: "absolute",
+              position: "fixed",
               left: "25%",
               top: "10%",
               display: state.CryptoModal ? 'block' : 'none',
