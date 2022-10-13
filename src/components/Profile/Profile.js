@@ -49,16 +49,15 @@ export const Profile = () => {
                 </Button>
           </div> 
         </WindowHeader>
-          <WindowContent style={{width: '600px', height: '800px'}}>
+          <WindowContent style={{width: '500px', height: '750px'}}>
           <div className="content">
             
               <p id="name">AYOUB BIFERDOU</p>
                 <br/>
-              <p>Skilled and detail-oriented Unity developer accustomed to working in fast-paced, deadline-driven environments.</p>
-                <br/> 
+              <p>Skilled and detail-oriented Unity developer accustomed to working in fast-paced, deadline-driven environments.</p> 
               <p>Able to develop virtual experiences on a variety of platforms, keep up with technology advancements and conduct research.</p>
                 <br/>
-                <Panel className='panel' variant='outside' style={{width: '600px'}}>
+                <Panel className='panel' variant='outside' style={{width: '500px'}}>
                     Education
                     <Fieldset className="scol1" label="2019-2020">
                     <p className="me_school">Institut Image - Arts et Métiers ParisTech</p>
@@ -70,7 +69,7 @@ export const Profile = () => {
                     </Fieldset>
                 </Panel>
 
-                <Panel className='panel' variant='outside' style={{width: '600px'}}>
+                <Panel className='panel' variant='outside' style={{width: '500px'}}>
                     Professional Experience
                     <Fieldset className="scol1" label="Oct 2021 - Present">
                     <p className="me_school">Allucyne/UTBM - Belfort</p>

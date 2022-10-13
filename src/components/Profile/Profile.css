@@ -36,11 +36,12 @@ content {
     padding-bottom: 5px;
 }
 .me_school {
+    font-size: 0.9em;
     font-weight: bolder;
 }
 
 .me_diploma {
-    font-size: 0.8em;
+    font-size: 0.7em;
     font-style: italic;
     font-weight: bolder;
 }
@@ -63,7 +64,7 @@ content {
 }
 
 .hobbies {
-    margin-top: 1px;
+    margin-top: 0.5px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -77,18 +78,18 @@ content {
 }
 
 .hobby {
-    margin-right: 0.4%;
+    margin-right: 0.1%;
 }
 
 .hobby_disc{
- color: rgb(37, 85, 92);
+ color: rgb(235, 28, 42);
 }
 .hobbiesFieldSet{
     margin-top: 15px !important;
 }
 
 .hobbyIco {
-    font-size: 3em;
+    font-size: 2em;
 }
 .button {
     margin-right: -6px;
