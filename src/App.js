@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import {createGlobalStyle,ThemeProvider} from  'styled-components';
-import { styleReset, AppBar, Toolbar, Window, WindowContent, WindowHeader, Button } from 'react95';
+import { styleReset, AppBar, Toolbar, Window, WindowContent, WindowHeader } from 'react95';
 import original from 'react95/dist/themes/original';
 import ms_sans_serif from "react95/dist/fonts/ms_sans_serif.woff2";
 import ms_sans_serif_bold from "react95/dist/fonts/ms_sans_serif_bold.woff2";
@@ -60,6 +60,7 @@ function App() {
       sound.play();
     }
   }, []);
+
   if (isMobile) {
     return (
       <MobileView>
@@ -83,40 +84,37 @@ function App() {
     )
   }
   return (
-      <BrowserView>
-      <GlobalStyles />
-      <ThemeProvider theme={original}>
-        <Store>
+      <Store>
+        <BrowserView>
+          <GlobalStyles/>
+          <ThemeProvider theme={original}>
             <nav>
-              
-              <footer>
-              <AppBar style={{ top: '93vh', bottom: '0vh', zIndex:1 }}>
-                    <Toolbar style={{justifyContent: 'space-between'}}>
-                      <NavBar>
-                        <AboutModalButton/>
-                        <GlobeModalButton/>
-                        <SkillsModalButton/>
-                      </NavBar>
+              <AppBar style={{ top: 'auto', bottom: '0px', zIndex: '3', position: 'fixed' }}>
+                    <Toolbar className="taskbar" style={{justifyContent: 'space-between'}}>
+                      <NavBar className="taskMenu" style={{ position: 'fixed', left: '0px', bottom: '45px' }}/>
+                      <AboutModalButton/>
+                      <GlobeModalButton/>
+                      <SkillsModalButton/>
                     </Toolbar>
               </AppBar>
-              </footer>
-
             </nav>
 
             <main>
-              <Desktop></Desktop>
-              <About></About>
-              <Skills></Skills>
-              <Profile></Profile>
-              <Globe></Globe>
-              <AudioWindow></AudioWindow>
-              <Crypto></Crypto>
-              <Contact></Contact>
-              <Terminal></Terminal>
+              <div>
+                <Desktop></Desktop>
+                <About></About>
+                <Skills></Skills>
+                <Profile></Profile>
+                <Globe></Globe>
+                <AudioWindow></AudioWindow>
+                <Crypto></Crypto>
+                <Contact></Contact>
+                <Terminal></Terminal>
+              </div>
             </main>
-        </Store>
-      </ThemeProvider>
-      </BrowserView>
+          </ThemeProvider>
+        </BrowserView>
+      </Store>
 
   );
 

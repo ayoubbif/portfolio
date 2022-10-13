@@ -32,9 +32,9 @@ export const Profile = () => {
               minWidth: "fit-content",
               height: "fit-content",
               position: "absolute",
-              left: "59%",
-              top: "0%",
-              overflowY: "auto",
+              bottom: '60px',
+              right: '0px',
+              zIndex: 1,
               display: state.ProfileModal ? 'block' : 'none',
             }}
             onClick={_handleClick}>

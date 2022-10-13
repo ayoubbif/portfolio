@@ -25,9 +25,9 @@ function Contact() {
               width: "fit-content",
               minWidth: "fit-content",
               height: "fit-content",
-              position: "absolute",
-              left: "7%",
-              top: "3%",
+              position: "fixed",
+              top: '15px',
+              right: '0px',
               overflowY: "auto",
               display: state.ContactModal ? 'block' : 'none',
             }}

@@ -43,10 +43,10 @@ const AudioWindow = () => {
               width: "fit-content",
               minWidth: "fit-content",
               height: "fit-content",
-              position: "absolute",
+              position: "fixed",
               left: "5%",
-              top: "10%",
-              overflowY: "auto",
+              top: "5%",
+              zIndex: 1,
               display: state.AudioWindowModal ? 'block' : 'none',
             }}
             onClick={_handleClick}>

@@ -1,7 +1,6 @@
 import * as THREE from 'three'
 import { Suspense, useEffect, useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { OrbitControls, Stars } from '@react-three/drei';
 import { suspend } from 'suspend-react'
 
 export default function AudioViz(props) {
