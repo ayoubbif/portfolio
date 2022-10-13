@@ -106,15 +106,13 @@ const Skills = () => {
     return(
       <Draggable>
         <Window resizable style={{
-            width: 810,
-            minWidth: 430,
-            maxWidth: '90%',
-            maxHeight: '90%',
-            position: 'fixed',
-            bottom: '60px',
-            right: '650px',
-            transform: 'translate(-50%, -50%)',
-            zIndex: 1,
+              width: "30%",
+              minWidth: "fit-content",
+              height: "fit-content",
+              position: "fixed",
+              left: '200px',
+              top: "200px",
+              zIndex: 1,
             display: state.SkillsModal ? 'block' : 'none',
             }}
             onClick={_handleClick}>
@@ -128,7 +126,7 @@ const Skills = () => {
         </WindowHeader>
             <WindowContent>
             <Tabs value={activeTab} onChange={handleChange}>
-                <Tab value={0}>3D & Game Dev</Tab>
+                <Tab value={0}>Game Dev</Tab>
                 <Tab value={1}>Web Developement</Tab>
                 <Tab value={2}>Production</Tab>
                 <Tab value={3}>Sound Design</Tab>

@@ -28,13 +28,12 @@ export const Profile = () => {
     return (
       <Draggable>
         <Window resizable style={{
-              width: "400px",
+              width: "20%",
               minWidth: "fit-content",
-              minHeight: "fit-content",
               height: "fit-content",
               position: "fixed",
-              bottom: '60px',
-              right: '0px',
+              right: '100px',
+              top: "100px",
               zIndex: 1,
               display: state.ProfileModal ? 'block' : 'none',
             }}
