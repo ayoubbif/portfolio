@@ -6,6 +6,7 @@ import './Projects.css';
 import { StoreContext } from '../../store';
 
 import {AiFillGithub } from 'react-icons/ai';
+import multiplayerImage from './../../assets/images/atlasmultiplayer.jpg';
 
 const Projects = () => {
     const [tabstate, settabState] = React.useState({
@@ -153,7 +154,7 @@ const Projects = () => {
                             <br/>
                             <br/>
                                 <Cutout>
-                                    <img className='image-project' src="atlasmultiplayer.jpg"></img>
+                                    <img className='image-project' src={multiplayerImage}></img>
                                 </Cutout>
                             <br/>
                             This game have been made using :  
