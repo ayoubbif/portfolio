@@ -48,7 +48,7 @@ export const Profile = () => {
                 </Button>
           </div> 
         </WindowHeader>
-          <WindowContent style={{width: '500px', height: '750px'}}>
+          <WindowContent style={{width: '500px', height: 'fit-content'}}>
           <div className="content">
             
               <p id="name">AYOUB BIFERDOU</p>
@@ -84,7 +84,7 @@ export const Profile = () => {
                     </Fieldset>
                 </Panel>
 
-                <Fieldset className="hobbiesFieldSet" label="Hobbies">
+                {/* <Fieldset className="hobbiesFieldSet" label="Hobbies">
                       <div className="hobbies">
                       <Tooltip className="hobby_disc" text='Music Production' enterDelay={100} leaveDelay={100}>  
                         <Cutout className="hobby"> 
@@ -103,7 +103,7 @@ export const Profile = () => {
                         </Cutout>
                       </Tooltip>
                       </div>
-                </Fieldset>
+                </Fieldset> */}
           </div>      
           </WindowContent>
         </Window>
